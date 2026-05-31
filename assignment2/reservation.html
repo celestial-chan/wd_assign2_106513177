@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ye Ser Chong">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reserve a table at one of our six restaurants near Swinburne Hawthorn.">
+    <title>Reserve - By the Moon</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <!-- banner -->
+    <header>
+        <img src="images/logo.png" alt="By the Moon logo" class="logo">
+        <div class="header-text">
+            <h1>By the Moon</h1>
+            <p class="tagline">Discover. Reserve. Dine By The Moon &copy;</p>
+        </div>
+    </header>
+
+    <!-- reused navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommend.html">Recommend</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="reservation.html" class="active">Reserve</a></li>
+            <li><a href="bill.html">Bill Calculator</a></li>
+        </ul>
+    </nav>
+</nav>
+
+<main>
+    <section>
+        <h2>Make a Reservation</h2>
+        <p>Fill in all fields below to reserve a table. Fields marked optional are not required.</p>
+    </section>
+
+    <section>
+        <form id="regform" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+        <fieldset>
+            <!-- shows grey text of the requirements-->
+            <legend>Your Details</legend>
+
+            <label for="fullname">Full Name</label>
+            <input id="fullname" type="text" name="fullname" placeholder="Your full name">
+
+            <label for="email">Email Address</label>
+            <input id="email" type="text" name="email" placeholder="example@email.com">
+
+            <label for="phone">Phone Number</label>
+            <input id="phone" type="text" name="phone" placeholder="At least 10 digits">
+        </fieldset>
+
+        <fieldset>
+            <legend>Reservation Details</legend>
+            <!-- add dropdown-->
+            <label for="restaurant">Restaurant</label>
+            <select id="restaurant" name="restaurant">
+                <option value="">-- Select a Restaurant --</option>
+                <option value="Watami Japanese Food">Watami Japanese Food</option>
+                <option value="Vaporetto Bar and Eatery">Vaporetto Bar &amp; Eatery</option>
+                <option value="Gamsa Korean BBQ">Gamsa Korean BBQ</option>
+                <option value="Banh Mi Lab">Banh Mi Lab</option>
+                <option value="Kebabji">Kebabji</option>
+                <option value="Nan Yang Express Hawthorn">Nan Yang Express Hawthorn</option>
+            </select>
+
+            <!-- calendar picker-->
+            <label for="resdate">Date</label>
+            <input id="resdate" type="date" name="resdate">
+
+            <!-- time picker-->
+            <label for="restime">Time</label>
+            <input id="restime" type="time" name="restime">
+
+            <!-- number of people min 1 entry allowed-->
+            <label for="people">Number of People</label>
+            <input id="people" type="number" name="people" min="1" placeholder="e.g. 2">
+
+            <!-- optional field-->
+            <label for="requests">Special Requests (optional)</label>
+            <textarea id="requests" name="requests" placeholder="Dietary needs, seating preferences, etc."></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Deposit &amp; Payment</legend>
+
+            <!-- deposit zero-->
+            <label>Deposit Amount</label>
+            <p id="depositDisplay"><strong>$0</strong></p>
+
+            <!-- payment selector-->
+            <label for="paymethod">Payment Method</label>
+            <select id="paymethod" name="paymethod">
+                <option value="">-- Select --</option>
+                <option value="voucher">Voucher</option>
+                <option value="online">Online Payment</option>
+            </select>
+
+            <!-- shows when voucher is selected-->
+            <div id="voucherSection" style="display:none;">
+                <label for="vouchercode">Voucher Code (12 digits)</label>
+                <input id="vouchercode" type="text" name="vouchercode" placeholder="12-digit code" maxlength="12">
+            </div>
+
+            <!-- shows when online payment is selected-->
+            <div id="cardSection" style="display:none;">
+                <label for="cardtype">Card Type</label>
+                <select id="cardtype" name="cardtype">
+                    <option value="">-- Select --</option>
+                    <option value="visa">Visa (16 digits)</option>
+                    <option value="mastercard">Mastercard (16 digits)</option>
+                    <option value="amex">American Express (15 digits)</option>
+                </select>
+
+                <!-- inputfield-->
+                <label for="cardnumber">Card Number</label>
+                <input id="cardnumber" type="text" name="cardnumber" placeholder="Digits only">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Billing</legend>
+            <!-- copy email to billing address-->
+            <label for="billingemail">Billing Email</label>
+            <input id="billingemail" type="text" name="billingemail" placeholder="Billing email address">
+            <label><input type="checkbox" id="sameemail"> Same as email address above</label>
+        </fieldset>
+        <input type="submit" value="Confirm Reservation">
+    </form>
+</section>
+</main>
+<footer>
+    <p>By the Moon &copy; 2026 &mdash; Ye Ser Chong (106513177)</p>
+</footer>
+</body>
+</html>
