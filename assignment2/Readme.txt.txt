@@ -20,7 +20,8 @@ JAVASCRIPT VALIDATION
 - Bill calculator: multiplies group size by average cost per person dynamically
 
 KNOWN ISSUES
-- All deposits are $0 as real restaurants do not require one
+- All deposits are $0 as real restaurants do not require one (this is a hard coded number that can be changed in script.js)
+- Form data sends to the Mercury server to test it, but nothing saves permanently
 
 REFERENCES
 - jQuery 3.7.1: https://jquery.com
