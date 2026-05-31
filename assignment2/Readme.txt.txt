@@ -10,7 +10,7 @@ js/script.js - JavaScript
 images/ - All images
 
 GITHUB REPOSITORY
-https://celestial-chan.github.io/wd_assign2_106513177/
+https://celestial-chan.github.io/wd_assign2_106513177/assignment2/index.html
 
 
 JAVASCRIPT VALIDATION
