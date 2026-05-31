@@ -1,0 +1,303 @@
+/* general styling */
+body {
+    background: #fafafa;
+    font-family: "Trebuchet MS", sans-serif;
+    color: #1c1c2e;
+    margin: 0;
+    padding: 0;
+    animation: fadeInPage 0.8s ease-out;
+}
+
+/* container styling for main sections */
+header, nav, main, footer {
+    max-width: 1000px;
+    margin: 12px auto;
+    padding: 18px 24px;
+    background: #fff;
+    border: 1px solid #e8e4f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(100, 70, 180, 0.06);
+}
+
+/* page fade in*/
+@keyframes fadeInPage {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* navigation an header */
+header {
+    border-left: 4px solid #7b5cff;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* stack container */
+header div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* by the moon logo */
+header img.logo {
+    height: 110px;
+    border-radius: 6px;
+}
+
+/* subtitle styling */
+.tagline {
+    margin: 0;
+    font-size: 0.9em;
+    color: #7b5cff;
+}
+
+/* typography*/
+h1 { font-size: 1.6em; font-weight: 600; margin: 0; }
+h2 { font-size: 1.2em; font-weight: 600; border-bottom: 2px solid #ede8ff; padding-bottom: 6px; }
+h3 { font-size: 1em; font-weight: 600; color: #7b5cff; }
+
+/* menu list configuration*/
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+/* hyperlink in navigation*/
+nav a {
+    color: #4a4060;
+    text-decoration: none;
+    padding: 7px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: all 0.18s ease;
+}
+
+/* hover interaction*/
+nav a:hover, nav a.active {
+    background: #ede8ff;
+    color: #7b5cff;
+}
+
+/* change hyperlink, font, hover, and image size*/
+p, li { line-height: 1.75; color: #3a3550; }
+a { color: #7b5cff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; border-radius: 8px; }
+
+/* card configs */
+.cards {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+
+/* individual card styling */
+.card {
+    flex: 1;
+    min-width: 180px;
+    background: #f7f4ff;
+    border: 1px solid #e8e4f0;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+/* form and user interface */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 560px;
+}
+
+label { font-weight: 600; font-size: 0.88em; }
+
+/* input, select, and textarea styling */
+input, select, textarea {
+    padding: 9px;
+    border: 1px solid #d8d4e8;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.92em;
+}
+
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #7b5cff;
+    box-shadow: 0 0 0 3px rgba(123, 92, 255, 0.1);
+}
+
+/* submission configs */
+input[type="submit"], button[type="submit"] {
+    background: #7b5cff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* submit button hover effect */
+input[type="submit"]:hover, button[type="submit"]:hover { background: #5a3be0; }
+
+fieldset {
+    border: 1px solid #e8e4f0;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+legend { font-weight: 600; color: #7b5cff; padding: 0 8px; }
+
+/* multiple check box */
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.radio-group label, .checkbox-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.pwd-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.pwd-row input { flex: 1; }
+
+.pwd-help-btn {
+    white-space: nowrap;
+    padding: 7px 12px;
+    background: #f7f4ff;
+    color: #7b5cff;
+    border: 1px solid #7b5cff;
+    border-radius: 6px;
+    font-size: 0.82em;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.pwd-help-btn:hover { background: #ede8ff; }
+
+/* table data main styling*/
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { border: 1px solid #e8e4f0; padding: 9px 12px; text-align: left; }
+th { background: #f7f4ff; font-weight: 600; }
+
+/* restaurant grid page */
+.restaurant {
+    margin-bottom: 24px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e8e4f0;
+    border-radius: 8px;
+}
+
+.restaurant-info {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.restaurant-img {
+    width: 240px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.restaurant-text { flex: 1; }
+.restaurant-text h3 { margin-top: 0; }
+
+/* hide until js */
+#overlay {
+    display: none;
+    z-index: 1;
+    position: fixed;
+    inset: 0;
+    background: grey;
+    opacity: 0.5;
+}
+
+#popup {
+    display: none;
+    z-index: 2;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border: 1px solid #7b5cff;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    padding: 20px 24px;
+    width: 24em;
+    max-width: 90vw;
+}
+
+#popup h3 { margin-top: 0; }
+#popup ul { padding-left: 20px; margin: 10px 0; }
+
+#popup button {
+    background: #7b5cff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 16px;
+    font-family: inherit;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#popup button:hover { background: #5a3be0; }
+
+footer { text-align: center; color: #8a859a; font-size: 0.85em; }
+
+/* screen setting */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    header, nav, main, footer { max-width: 95%; }
+}
+
+@media screen and (max-width: 767px) {
+    header, nav, main, footer { max-width: 95%; padding: 12px 14px; }
+    header { flex-direction: column; border-left: none; border-top: 4px solid #7b5cff; }
+    nav ul { flex-direction: column; }
+    nav a { display: block; text-align: center; }
+    .cards { flex-direction: column; }
+    form { max-width: 100%; }
+    .restaurant-info { flex-direction: column; }
+    .restaurant-img { width: 100%; height: auto; }
+}
+
+/* At least one external CSS file (style.css) must be linked to all pages.
+○ Responsive design is required:
+○ Desktop: ≥ 1024px
+○ Tablet: 768–1023px
+○ Mobile: ≤ 767px
+○ Accessibility requirements:
+○ All images must include appropriate alt text
+○ Sufficient colour contrast
+○ Readable font sizes
+○ Logical heading hierarchy */
