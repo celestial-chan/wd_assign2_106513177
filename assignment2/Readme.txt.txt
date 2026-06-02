@@ -25,4 +25,4 @@ KNOWN ISSUES
 
 REFERENCES
 - jQuery 3.7.1: https://jquery.com
-- AI: Claude (Anthropic) used for brainstorming and reference. Anthropic. (2025). Claude (claude-sonnet-4-6) [Large language model]. https://claude.ai
+- AI: Claude (Anthropic) used for brainstorming and reference. Anthropic. (2026). Claude (claude-sonnet-4-6) [Large language model]. https://claude.ai
